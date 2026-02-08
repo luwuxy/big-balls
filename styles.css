@@ -1,0 +1,224 @@
+@font-face {
+    font-family: "Ganttie Rought";
+    src: url("GanttieRought-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lokeya";
+    src: url("Lokeya.ttf") format("truetype");
+}
+
+body {
+    font-family: 'Lokeya', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, white, transparent 90%);
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+.header {
+    display: flex;
+    flex: 0;
+    justify-content: space-between;
+    background-color: rgba(83, 83, 83, 70%);
+    backdrop-filter: blur(10px);
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 255, 230, 0.3) transparent;
+}
+
+.navbar h2 {
+    color: white;
+    margin: 0 100px;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    display: flex;
+    margin: 0 100px;
+    padding: 15px;
+    gap: 15px;
+    list-style: none;
+}
+
+.navbar li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar li a {
+    color: black;
+    padding: 5px 15px;
+    background-color: #fcfdc0;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 24px 5px rgba(0, 0, 0, 0.49);
+    box-shadow: 0px 0px 24px 5px rgba(0, 0, 0, 0.49);
+    width: 75px;
+    text-decoration: none;
+}
+
+.navbar p {
+    flex: 1;
+    border: 2px solid brown;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    flex: 1;
+    background-color: #b1bba5;
+    box-shadow: 0px 0px 40px 50px #b1bba5;
+    -webkit-box-shadow: 0px 0px 40px 50px #b1bba5;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.content h1 {
+    margin: 0;
+    padding: 20px 0 20px 0;
+    color: rgb(34, 0, 0);
+    text-align: center;
+    font-family: 'Ganttie Rought', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.menu-ctn {
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: #fcebd5;
+    width: 1100px;
+    border-radius: 30px;
+}
+
+.showcase {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    padding-bottom: 50px;
+}
+
+.showcase img {
+    width: 270px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.thumb {
+    width: 270px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid rgba(34, 0, 0, 20%);
+    border-radius: 15px;
+    -webkit-box-shadow: 7px 9px 2px 1px #BCBF9D;
+    box-shadow: 7px 9px 2px 1px #BCBF9D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e5e9be;
+    overflow: hidden;
+}
+
+.thumb p {
+    color: rgb(34, 0, 0);
+    font-size: 22px;
+    margin: auto;
+    padding: 0;
+}
+
+.about {
+    background-color: #9ba590;
+}
+
+.about,
+.visit {
+    display: flex;
+    padding: 50px 150px 50px 150px;
+    gap: 50px;
+}
+
+.cafe {
+    width: 550px;
+}
+
+.about-right,
+.visit-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about h1,
+.visit h1 {
+    font-size: 50px;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+}
+
+.about p,
+.visit p {
+    color: #33231c;
+    font-size: 23px;
+}
+
+.about a,
+.visit a {
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    width: 120px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    background-color: #a06626;
+    color: #e7e7bf;
+}
+
+.visit h1 {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.visit p {
+    margin: 0;
+    padding: 0;
+}
+
+.visit svg {
+    width: 30px;
+}
+
+.visit input {
+    font-size: 18px;
+    font-family: 'Lokeya', sans-serif;
+    width: 350px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#email {
+    margin-bottom: 20px;
+}
+
+#message {
+    font-family: 'Lokeya', sans-serif;
+    margin-bottom: 20px;
+    height: 80px;
+    font-size: 18px;
+    width: 350px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
