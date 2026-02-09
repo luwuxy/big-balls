@@ -19,34 +19,43 @@ body {
 .navbar {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to bottom, white, transparent 90%);
-    background-image: url(background.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            /* Start with 50% opaque black */
+            rgba(0, 0, 0, 0.5)
+            /* End with 50% opaque black */
+        ),
+        url("background.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 650px;
+}
+
+.logo {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .header {
     display: flex;
     flex: 0;
     justify-content: space-between;
-    background-color: rgba(83, 83, 83, 70%);
-    backdrop-filter: blur(10px);
-    border-width: 1px;
-    border-style: solid;
-    border-color: transparent transparent rgba(255, 255, 230, 0.3) transparent;
+    background-color: #e6dad1;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 5px 0 0 #514d34;
 }
 
 .navbar h2 {
-    color: white;
-    margin: 0 100px;
+    color: #25110d;
+    margin: auto 100px;
     padding: 15px 0;
 }
 
 .navbar ul {
     display: flex;
     margin: 0 100px;
-    padding: 15px;
+    padding: 20px 15px;
     gap: 15px;
     list-style: none;
 }
@@ -57,14 +66,18 @@ body {
 }
 
 .navbar li a {
-    color: black;
+    color: #4b231b;
     padding: 5px 15px;
-    background-color: #fcfdc0;
+    background-color: #f5e8cd;
     border-radius: 50px;
-    -webkit-box-shadow: 0px 0px 24px 5px rgba(0, 0, 0, 0.49);
-    box-shadow: 0px 0px 24px 5px rgba(0, 0, 0, 0.49);
-    width: 75px;
+    -webkit-box-shadow: 0px 0px 15px 5px #CFC5B3;
+    box-shadow: 0px 0px 15px 5px #CFC5B3;
+    width: 81px;
     text-decoration: none;
+}
+
+#active {
+    background-color: #beb49f;
 }
 
 .navbar p {
@@ -77,10 +90,7 @@ body {
 .content {
     flex: 1;
     background-color: #b1bba5;
-    box-shadow: 0px 0px 40px 50px #b1bba5;
-    -webkit-box-shadow: 0px 0px 40px 50px #b1bba5;
-    padding-bottom: 50px;
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 .content h1 {
@@ -118,10 +128,9 @@ body {
     width: 270px;
     height: 300px;
     object-fit: cover;
-    border: 1px solid rgba(34, 0, 0, 20%);
     border-radius: 15px;
-    -webkit-box-shadow: 7px 9px 2px 1px #BCBF9D;
-    box-shadow: 7px 9px 2px 1px #BCBF9D;
+    -webkit-box-shadow: 7px 9px 0px 1px #BCBF9D;
+    box-shadow: 7px 9px 0px 1px #BCBF9D;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,17 +147,30 @@ body {
 
 .about {
     background-color: #9ba590;
+    padding: 20px 0;
 }
 
-.about,
+.about-ctn {
+    display: flex;
+    padding: 30px 30px 30px 30px;
+    gap: 50px;
+    margin: auto;
+    background-color: #fcebd5;
+    width: 1150px;
+    border-radius: 30px;
+}
+
 .visit {
     display: flex;
     padding: 50px 150px 50px 150px;
     gap: 50px;
 }
 
-.cafe {
-    width: 550px;
+.cafe,
+.cafeout {
+    border-radius: 15px;
+    -webkit-box-shadow: 7px 9px 0px 1px #BCBF9D;
+    box-shadow: 7px 9px 0px 1px #BCBF9D;
 }
 
 .about-right,
@@ -168,7 +190,7 @@ body {
 
 .about p,
 .visit p {
-    color: #33231c;
+    color: #473127;
     font-size: 23px;
 }
 
@@ -180,9 +202,20 @@ body {
     width: 120px;
     padding: 10px 15px;
     border-radius: 15px;
+    -webkit-box-shadow: 5px 7px 0px 1px #BCBF9D;
+    box-shadow: 5px 7px 0px 1px #BCBF9D;
     text-decoration: none;
     background-color: #a06626;
     color: #e7e7bf;
+}
+
+.visit-ctn {
+    display: flex;
+    margin: auto;
+    padding: 30px;
+    background-color: #fcebd5;
+    width: 1100px;
+    border-radius: 30px;
 }
 
 .visit h1 {
@@ -217,8 +250,42 @@ body {
     margin-bottom: 20px;
     height: 80px;
     font-size: 18px;
-    width: 350px;
+    width: 450px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
+}
+
+footer {
+    display: grid;
+    background-color: #31352e;
+    height: 200px;
+    grid-template-columns: 1fr auto 1fr; 
+}
+
+.footer-left {
+    display: flex;
+    justify-self: center;
+    margin: auto;
+}
+
+footer h2 {
+    color: rgb(238, 238, 238);
+    margin: auto;
+}
+
+.line {
+    margin: auto 0;
+    background-color: white;
+    width: 1px;
+    height: 70px;
+}
+
+.footer-right {
+    justify-self: center;
+    margin: auto;
+}
+
+.messenger {
+    margin: auto;
 }
