@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Ganttie Rought";
-    src: url("GanttieRought-Regular.ttf") format("truetype");
+    src: url("./fonts/GanttieRought-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Lokeya";
-    src: url("Lokeya.ttf") format("truetype");
+    src: url("./fonts/Lokeya.ttf") format("truetype");
 }
 
 body {
@@ -19,27 +19,31 @@ body {
 .navbar {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
             /* Start with 50% opaque black */
             rgba(0, 0, 0, 0.5)
             /* End with 50% opaque black */
         ),
-        url("background.png");
+        url("./img/background.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 650px;
 }
 
-.logo {
-    position: absolute;
-    top: 46%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 }
 
 .header {
     display: flex;
     flex: 0;
+    align-self: stretch;
     justify-content: space-between;
     background-color: #e6dad1;
     backdrop-filter: blur(3px);
@@ -74,6 +78,10 @@ body {
     box-shadow: 0px 0px 15px 5px #CFC5B3;
     width: 81px;
     text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #d1c6b0;
 }
 
 #active {
